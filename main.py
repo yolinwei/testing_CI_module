@@ -12,7 +12,7 @@ def extract_nifti_data(img_path: str) -> np.ndarray:
 
 def threshold_data(data: np.ndarray, threshold: float) -> np.ndarray:
     """Threshold the data to only keep the voxels with a value above the threshold."""
-    thresholded_data = data[data < threshold]
+    thresholded_data = data[data > threshold]
     return thresholded_data
 
 
